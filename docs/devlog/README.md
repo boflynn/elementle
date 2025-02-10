@@ -61,3 +61,25 @@ something more from this.
     So the last wasn't serving right because I have my source code symlinked
     between drives, which doesn't work. When I navigated to the real folder,
     it worked.
+
+1. Implementation
+
+    I started using [this course](https://react-v8.holt.courses/) as a reference,
+    which I'm liking so far. I got to the point of setting up `useState`, when
+    I hit an error that wasn't represented in that course. This was something I
+    ran into last time about the different ways of representing components,
+    either as a class / component or as something not a class / component.
+
+    I guess I need to use a component. Moving things inside of `export default
+    function` gets things working. Yay.
+
+    Oh, they're called functional components. I should remember that.
+
+    This ended up being a lot easier than last time. One thing I did this time
+    was ask ChatGPT a number of questions, which gave better examples than I
+    was finding in any documentation.
+
+    I'm pretty happy with how this is working. There are a few things with the
+    implementation to improve upon and obviously a lot of display stuff to make
+    nicer, but Rowan thinks it's neat already.
+    
