@@ -83,3 +83,17 @@ something more from this.
     implementation to improve upon and obviously a lot of display stuff to make
     nicer, but Rowan thinks it's neat already.
     
+1. Refinement
+
+    There is a lot I just have no idea about, but brute forcing `flex`
+    properties gets me there. I'm starting to feel pretty decent about this.
+
+    Using ChatGPT for ideas and quick answers still feels wrong to me, but I
+    don't know why. I wouldn't be solving it myself without it, I'd just be
+    searching and hoping for documentation or a blog. Still though, weird.
+
+    UI is hard. Trying to cleanly indicate before / after in both alphabet as
+    well as element number is weird. In my mind, an up arrow could easily be
+    interpreted as both "pick a higher number" as well as "it's higher up on
+    the list", i.e. lower number. I think we'll have to end up with text to make
+    it clear.

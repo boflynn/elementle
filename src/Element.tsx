@@ -3,4 +3,5 @@ export default interface Element {
     number: number;
     phase: string;
     category: string;
+    symbol: string;
 }

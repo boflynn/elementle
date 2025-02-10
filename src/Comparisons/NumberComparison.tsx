@@ -1,13 +1,13 @@
 import ComparisonProps from "./ComparisonProps";
 
-export default function Result({ element, secret }: ComparisonProps) {
-  const numberResult = element.number < secret.number
-    ? "too early, guess later in the table"
-    : element.number > secret.number
-      ? "too far, guess earlier in the table"
-      : "THAT'S IT!";
-      
+export default function NumberComparison({ guess, secret }: ComparisonProps) {
   return (
-    <li>{numberResult}</li>
+    <div className={`comparison ${guess.number < secret.number ? "low" : "high"}`}>
+      <p>
+        {guess.number > secret.number ? "←" : ""}
+        &nbsp;{guess.number}&nbsp;
+        {guess.number < secret.number ? "→" : ""}
+      </p>
+    </div>
   );
 }

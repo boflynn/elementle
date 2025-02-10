@@ -40,3 +40,44 @@
 .read-the-docs {
   color: #888;
 }
+
+.result {
+  display: flex;
+  flex-direction: row;
+  place-content: stretch center;
+  align-items: center;
+  height: 125px;
+  flex: 1 1 100%;
+}
+
+.comparison {
+  background-clip: content-box;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  padding: .2em;
+  aspect-ratio: 1 / 1;
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  flex: 1 1 100%;
+}
+
+.right {
+  background: linear-gradient(135deg, #00903d, #00903d 65%, #007e30 35%);
+}
+
+.wrong {
+  background: linear-gradient(135deg,#bb0923,#bb0923 65%,#9b0923 35%);
+}
+
+.low {
+  background: linear-gradient(135deg,#0080ff,#0080ff 65%,#0055aa 35%);
+}
+
+.high {
+  background: linear-gradient(135deg,#e600ff,#e600ff 65%,#860094 35%);
+}

@@ -21,7 +21,7 @@ export default function Results({ elements, guesses, secret }: ResultsProps) {
     return (
       <Result
         key={element!.name}
-        element={element!}
+        guess={element!}
         secret={secret} />
     );
   });

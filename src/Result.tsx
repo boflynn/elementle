@@ -2,25 +2,26 @@ import NameComparison from './Comparisons/NameComparison'
 import NumberComparison from './Comparisons/NumberComparison'
 import PhaseComparison from './Comparisons/PhaseComparison'
 import CategoryComparison from './Comparisons/CategoryComparison'
+import SymbolComparison from './Comparisons/SymbolComparison'
 import Element from "./Element";
 
 interface ResultsFormProps {
-    element: Element;
+  guess: Element;
     secret: Element;
 }
 
-export default function Result({ element, secret }: ResultsFormProps) {
+export default function Result({ guess, secret }: ResultsFormProps) {
   // TODO - Could this do a dependency injection thing to add all comparisons?
 
   return (
     <div>
-      <p>{element.name}</p>
-      <ul>
-        <NameComparison element={element} secret={secret} />
-        <NumberComparison element={element} secret={secret} />
-        <PhaseComparison element={element} secret={secret} />
-        <CategoryComparison element={element} secret={secret} />
-      </ul>
+      <div className="result">
+        <NameComparison guess={guess} secret={secret} />
+        <NumberComparison guess={guess} secret={secret} />
+        <PhaseComparison guess={guess} secret={secret} />
+        <CategoryComparison guess={guess} secret={secret} />
+        <SymbolComparison guess={guess} secret={secret} />
+      </div>
     </div>
   );
 }

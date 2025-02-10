@@ -1,12 +1,9 @@
 import ComparisonProps from "./ComparisonProps";
 
-export default function Result({ element, secret }: ComparisonProps) {
-  const isMatch = element.phase.toLowerCase() == secret.phase.toLowerCase();
-  const phaseResult = isMatch
-    ? `YES IT IS A ${element.phase}`
-    : `NO IT IS NOT A ${element.phase}`;
+export default function PhaseComparison({ guess, secret }: ComparisonProps) {
+  const isMatch = guess.phase.toLowerCase() == secret.phase.toLowerCase();
       
   return (
-    <li style={isMatch ? { fontWeight: "bold"} : {}}>{phaseResult}</li>
+    <div className={isMatch ? "comparison right" : "comparison wrong"}><p>{guess.phase}</p></div>
   );
 }

@@ -1,14 +1,13 @@
 import ComparisonProps from "./ComparisonProps";
 
-export default function Result({ element, secret }: ComparisonProps) {
-  const comparison = element.name.toLowerCase().localeCompare(secret.name.toLowerCase());
-  const nameResult = comparison < 0
-    ? "too early, guess later in the alphabet"
-    : comparison > 0
-      ? "too far, guess earlier in the alphabet"
-      : "THAT'S IT!";
-      
+export default function NameComparison({ guess, secret }: ComparisonProps) {
   return (
-    <li>{nameResult}</li>
+    <div className={`comparison ${guess.name < secret.name ? "low" : "high"}`}>
+      <p>
+        {guess.name > secret.name ? "←" : ""}
+        &nbsp;{guess.name}&nbsp;
+        {guess.name < secret.name ? "→" : ""}
+      </p>
+    </div>
   );
 }
