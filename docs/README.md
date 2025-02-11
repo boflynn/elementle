@@ -14,7 +14,7 @@ Periodic table of elements guessing game.
 - [x] Initial guessing game on one attribute, let's say alphabetical order
 - [ ] Autocomplete element names
 - [ ] Synonym support, e.g. Aluminum vs. Aluminium
-- [ ] Clean up JSON data, e.g. Moscovium "unknown, probably post-transition metal"
+- [x] Clean up JSON data, e.g. Moscovium "unknown, probably post-transition metal"
 - [ ] Get happy with tooling, e.g. linting
 - [x] Add second attribute, e.g. number, and cleaner display
 - [x] Add remaining attributes

@@ -9,6 +9,7 @@ function App() {
   const [secretElement] = useState(() => elements[Math.floor(Math.random() * elements.length)]);
   const [guesses, setGuesses] = useState<string[]>([]);
 
+  console.log(secretElement.name);
   function handleGuess(guess: string): void {
     const updatedGuesses = [...guesses, guess];
 
