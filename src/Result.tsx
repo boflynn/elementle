@@ -7,12 +7,10 @@ import Element from "./Element";
 
 interface ResultsFormProps {
   guess: Element;
-    secret: Element;
+  secret: Element;
 }
 
-export default function Result({ guess, secret }: ResultsFormProps) {
-  // TODO - Could this do a dependency injection thing to add all comparisons?
-
+export default function Result({ guess, secret }: ResultsFormProps) { 
   return (
     <div>
       <div className="result">

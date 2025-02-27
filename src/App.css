@@ -81,3 +81,37 @@
 .high {
   background: linear-gradient(135deg,#e600ff,#e600ff 65%,#860094 35%);
 }
+
+#periodic-table {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(18, 1fr);
+}
+
+#periodic-table .element {
+  width: 75px;
+  height: 75px;
+  border: 1px solid red;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+/* TODO - Align to top left */
+#periodic-table .element .number {
+  font-size: 0.5em;
+}
+
+#periodic-table .element .symbol {
+  font-size: 1.25em;
+}
+
+#periodic-table .element .name {
+  width: 75px;
+  font-size: .75em;
+}
+
+#periodic-table .invalid {
+  background: grey;
+}

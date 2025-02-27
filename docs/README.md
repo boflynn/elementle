@@ -19,12 +19,13 @@ Periodic table of elements guessing game.
 - [x] Add second attribute, e.g. number, and cleaner display
 - [x] Add remaining attributes
 - [ ] Round management, e.g. end of round, new game
-- [ ] Visually show remaining options on periodic table, i.e. easy mode
+- [x] Visually show remaining options on periodic table, i.e. easy mode
 - [ ] Overall app styling
 - [ ] Cut down on duplications, e.g. comparison mapping to CSS class
-- [ ] Difficulty settings, e.g. pick which comparisons you want to use
+- [ ] Difficulty settings, e.g. pick which comparisons, start with one comparison
 - [ ] Simplify JSON file
 - [ ] Unit Testing
 - [ ] Browser Testing
 - [ ] Deployment
 - [ ] Hosting at something.boflynn.net
+- [ ] Pass around data better

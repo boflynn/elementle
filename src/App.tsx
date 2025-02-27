@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import './App.css'
 import GuessForm from './GuessForm'
+import PeriodicTable from './PeriodicTable'
 import Results from './Results'
 import elements from './assets/elements.json';
 
@@ -19,14 +20,20 @@ function App() {
   return (
     <>
       <h1>Elementle</h1>
-      
+
+      <PeriodicTable
+        elements={elements}
+        guesses={guesses}
+        secret={secretElement} />
+
       <Results
         elements={elements}
         guesses={guesses}
         secret={secretElement} />
-      
+
       <GuessForm
-        onGuess={handleGuess}  />
+        onGuess={handleGuess}
+        elements={elements} />
     </>
   )
 }

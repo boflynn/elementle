@@ -4,4 +4,6 @@ export default interface Element {
     phase: string;
     category: string;
     symbol: string;
+    xpos: number;
+    ypos: number;
 }

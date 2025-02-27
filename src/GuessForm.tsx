@@ -1,28 +1,39 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import Element from "./Element";
 
-export default function GuessForm({ onGuess }: { onGuess: (guess: string) => void }) {
-  const [name, setName] = useState("");
-  
-  function onSearchSubmit(event: FormEvent<HTMLFormElement>): void {
-    event.preventDefault();
+interface GuessFormProps {
+  onGuess: (guess: string) => void;
+  elements: Element[];
+}
 
-    onGuess(name);
+export default function GuessForm({ onGuess, elements }: GuessFormProps) {
+  const [, setName] = useState("");
+
+  function makeGuess(guess: string | undefined): void {
+    if(guess === undefined) {
+      return;
+    }
+
+    onGuess(guess!);
     setName("");
   }
 
+  // Ideally, you can type whatever you want. If you highlight one and hit enter, it should be submitted
+  // Upon submission, it should clear the field
+
   return (
     <div>
-      <form onSubmit={onSearchSubmit}>
-        <label htmlFor="name">Element Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          placeholder="Rubidium"
-          onChange={(e) => setName(e.target.value)} />
-        <button>Submit</button>
-      </form>
+      <Autocomplete
+        id="name"
+        disablePortal
+        options={elements.sort((a, b) => -b.name.localeCompare(a.name))}
+        getOptionLabel={(option) => option.name}
+        sx={{ width: 300 }}
+        renderInput={(params) => <TextField {...params} label="Element" />}
+        onChange={(_, newValue) => makeGuess(newValue!.name)}
+      />
     </div>
   );
 }

@@ -54,7 +54,7 @@ something more from this.
 
     ```bash
     npm create vite@latest
-    npm init
+    npm install
     npm run dev
     ```
 
@@ -82,7 +82,7 @@ something more from this.
     I'm pretty happy with how this is working. There are a few things with the
     implementation to improve upon and obviously a lot of display stuff to make
     nicer, but Rowan thinks it's neat already.
-    
+
 1. Refinement
 
     There is a lot I just have no idea about, but brute forcing `flex`
@@ -97,3 +97,11 @@ something more from this.
     interpreted as both "pick a higher number" as well as "it's higher up on
     the list", i.e. lower number. I think we'll have to end up with text to make
     it clear.
+
+1. Release
+
+    Okay, there is clearly a lot to get done with this, but I want to get it out
+    there, both for my sake and because my son really wants to be able to play
+    it on his own, in spite of the awkwardness of it.
+
+    So here we go.
